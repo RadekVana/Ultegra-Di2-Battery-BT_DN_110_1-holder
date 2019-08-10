@@ -42,7 +42,7 @@ BT_cube_face_center = 9 - BT_con_d/2;
 MODULES
 *******************************************************/
 
-module BT_DN_110_1(enableBotHole = true, enableCable = true, extraSz = 0.0 ){
+module BT_DN_110_1(enableBotHole = true, enableCable = true){
 	module lock(){
 		difference(){
 			cylinder(d = BT_d +0.1, h = BT_lock_h);
@@ -73,10 +73,3 @@ module BT_DN_110_1(enableBotHole = true, enableCable = true, extraSz = 0.0 ){
 }
 
 
-
-
-/*******************************************************
-TEST
-*******************************************************/
-$fn = $preview ? 32 : 128;
-BT_DN_110_1();
