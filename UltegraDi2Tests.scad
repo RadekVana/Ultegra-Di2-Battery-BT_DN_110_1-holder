@@ -11,7 +11,7 @@ INCLUDES
 include <WIRE_EW_SD50.scad>
 include <JUNCTION_SM_JC41.scad>
 include <Battery_BT_DN_110_1.scad>
-
+include <BottleMountAndBottleCage.scad>
 
 
 
@@ -44,3 +44,10 @@ translate([-120,0,0])junction( 10,bigger_in_all_dir = 0.2);
 translate([-130,0,0])junction( 10,bigger_in_all_dir = 0.2,enableCableLocks =false);//no locks
 translate([-145,0,0])junction( 10,bigger_in_all_dir = 1);
 
+translate([  0,-100,0])frame();
+translate([  0,-140,0])frame(generate_screw_len = 10);
+translate([  0,-180,0])frame(generate_screw_len = 10, bigger_all_dir=2);
+translate([  0,-220,0])frame(generate_screw_len = 30, bigger_all_dir=0.2);
+
+translate([ 80,-100,0])bottleCage();
+translate([ 70,-220,0])bottleCage(0.2);
